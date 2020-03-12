@@ -1,0 +1,120 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/signup.css" />
+
+<header>
+  <div id="flextitude">
+    <nav>
+      <ul>
+        <h1>Basil 🌿</h1>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div>
+  <h3>***</h3>
+  <h1>Sign up ✍️</h1>
+  <img src="/images/undraw_sign_in_e6hj.png" class="image" height="80%" width="80%" />
+  <h2>Log in to check your wellness dashboard</h2>
+  <p>
+    Enjoy your personal programm, see your progress and take advantages from your healthier lifestyle
+  </p>
+</div>
+
+<!--- Formulaire -->
+<style>
+  form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    border-color: #F6C9C8;
+    color: darkgray;
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  form div+div {
+    margin-top: 1em;
+  }
+
+  label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+
+  input,
+  textarea {
+    font: 1em sans-serif;
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 5px;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: darkgray;
+  }
+
+  .button {
+    padding-left: 90px;
+  }
+
+  button {
+    margin-left: 0.5em;
+  }
+</style>
+
+<form action="/new" method="POST" class="new">
+  <div>
+    <label for="firstname">Firstname:</label>
+    <input type="text" id="firstname" name="user_firstname" />
+  </div>
+  <div>
+    <label for="lastname">Lastname:</label>
+    <input type="text" id="lastname" name="user_lastname" />
+  </div>
+  <div>
+    <label for="mail">Mail:</label>
+    <input type="email" id="mail" name="user_mail" />
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" name="user_password"></input>
+    <h6>To preserve your privacy and keep hackers away: eat a bit of garlic every day 🧄✚ your password must be at least
+      12 characters long, upper and lower case, and at least one number. </h6>
+  </div>
+  <div class="button">
+    <button type="submit">Sign up</button>
+  </div>
+</form>
+<p>Already have an account ? Log in <a href="/login">here</a></p>
+
+<!--- Footer -->
+{{!-- <div id="footer">
+    <h2>Made with ❤️ in Paris</h2>
+   <a href="/">Basil 🌿</a>
+
+    <h2>Contact us 💌</h2>
+
+    <!--- Bonus : prospect.model -->
+    <form action="/contact" method="post" class="contact">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" />
+      </div>
+      <div>
+        <label for="mail">Mail :</label>
+        <input type="email" id="mail" name="user_mail" />
+      </div>
+      <div>
+        <label for="msg">Message :</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <div class="button">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div> --}}

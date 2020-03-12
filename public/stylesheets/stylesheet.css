@@ -1,0 +1,29 @@
+body {
+    background-color: white;
+  }
+
+  h1 {
+    color: #92a8d1;
+    font-size: 40px;
+    font-size-adjust: initial;
+    font-weight: bolder;
+  }
+
+  h2 {
+    color: darkgrey;
+  }
+
+  p {
+    color: grey;
+  }
+
+h6 {
+        color: #92A8D1;
+        font-size: x-small;
+        font-weight: lighter;
+    }
+
+
+/**/
+
+
