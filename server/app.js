@@ -6,6 +6,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
+const session = require('express-session');
 
 mongoose
     .connect("mongodb://localhost/basil-v2", {
@@ -32,6 +33,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.raw());
 app.use(cookieParser());
+app.use(session({
+    'secret': 's3cr3t',
+    resave: false,
+    saveUninitialized: false,
+}));
 
 // default value for title local
 app.locals.title = "Basil";

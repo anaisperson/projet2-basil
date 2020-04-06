@@ -22,7 +22,6 @@ router.post("/signup", function(req, res, next) {
 });
 
 router.post("/login", function(req, res, next) {
-
     User.findOne({ email: req.body.email })
         .then((user) => {
             if (!user) {
@@ -32,7 +31,8 @@ router.post("/login", function(req, res, next) {
                 return res.status(400).send({ message: "The password is invalid" });
             }
 
-            res.send({ message: "The username and password combination is correct!" });
+            req.session.user = user;
+            res.send({ message: 'login !' });
         })
         .catch((err) => {
             console.error(err);
@@ -40,8 +40,17 @@ router.post("/login", function(req, res, next) {
         });
 });
 
-router.get("/logout", function(req, res, next) {});
+router.get("/logout", function(req, res, next) {
+    req.session.destroy();
+    res.send({ message: 'logout' })
+});
 
-router.get("/profile", function(req, res, next) {});
+router.get("/profile", function(req, res, next) {
+    if (!req.session.user) {
+        return res.status(401).send({ message: 'Please login before !' });
+    }
+
+    res.status(200).send(req.session.user);
+});
 
 module.exports = router;
