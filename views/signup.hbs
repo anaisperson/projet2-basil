@@ -67,22 +67,26 @@
   }
 </style>
 
-<form action="/new" method="POST" class="new">
+{{#if error}}
+<span style="color:red;font-style:italic;text-align:center">{{{ error }}}</span>
+{{/if}}
+
+<form action="/users/signup" method="POST" class="new">
   <div>
     <label for="firstname">Firstname:</label>
-    <input type="text" id="firstname" name="user_firstname" />
+    <input type="text" id="firstname" name="firstname" />
   </div>
   <div>
     <label for="lastname">Lastname:</label>
-    <input type="text" id="lastname" name="user_lastname" />
+    <input type="text" id="lastname" name="lastname" />
   </div>
   <div>
-    <label for="mail">Mail:</label>
-    <input type="email" id="mail" name="user_mail" />
+    <label for="email">Mail:</label>
+    <input type="email" id="email" name="email" />
   </div>
   <div>
     <label for="password">Password:</label>
-    <input id="password" name="user_password"></input>
+    <input id="password" name="password" type="password"></input>
     <h6>To preserve your privacy and keep hackers away: eat a bit of garlic every day 🧄✚ your password must be at least
       12 characters long, upper and lower case, and at least one number. </h6>
   </div>
@@ -91,30 +95,3 @@
   </div>
 </form>
 <p>Already have an account ? Log in <a href="/login">here</a></p>
-
-<!--- Footer -->
-{{!-- <div id="footer">
-    <h2>Made with ❤️ in Paris</h2>
-   <a href="/">Basil 🌿</a>
-
-    <h2>Contact us 💌</h2>
-
-    <!--- Bonus : prospect.model -->
-    <form action="/contact" method="post" class="contact">
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" />
-      </div>
-      <div>
-        <label for="mail">Mail :</label>
-        <input type="email" id="mail" name="user_mail" />
-      </div>
-      <div>
-        <label for="msg">Message :</label>
-        <textarea id="msg" name="user_message"></textarea>
-      </div>
-      <div class="button">
-        <button type="submit">Send</button>
-      </div>
-    </form>
-  </div> --}}
