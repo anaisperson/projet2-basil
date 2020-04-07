@@ -1,40 +1,45 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/login.css" />
 
-<header>
-  <div id="flextitude">
-    <nav>
-      <ul>
-        <h1>Basil 🌿</h1>
-      </ul>
-    </nav>
-  </div>
-</header>
+{{!-- <header> --}}
+{{!-- <div id="flextitude"> --}}
+<nav>
+  {{!-- <ul> --}}
+  <h1 class="title">🌿 Basil</h1>
+  {{!-- </ul> --}}
+</nav>
+{{!-- </div> --}}
+{{!-- </header> --}}
 
-<div>
-  <h3>***</h3>
-  <h1>Log in 🦥</h1>
-  <img src="/images/undraw_mobile_login_ikmv.png" class="image" height="40%" width="40%" />
-  <h2>Log in to check your wellness dashboard</h2>
+<div class="presentation">
+  {{!-- <h3>***</h3> --}}
+  <h2>Log in 🦥</h2>
+  <h3>to check your wellness dashboard</h3>
+  <img src="/images/undraw_mobile_login_ikmv.png" class="image" height="25%" width="25%" />
   <p>
     Enjoy your personal programm, see your progress and take advantages from your healthier lifestyle
   </p>
-</div>
+  <form action="/users/login" method="post" class="form">
 
+    <label for="mail">Email: </label>
+    {{!-- <input type="email" id="mail" name="email" /> --}}
+    <div className="field">
+      <div className="control">
+        <input className="input is-warning" type="text" name="username" placeholder="dalai@lama.org" />
+      </div>
+    </div>
 
+    <label for="password">Password: </label>
+    <div className="field">
+      <div className="control">
+        <input className="input is-warning" type="text" name="password" placeholder="pa$$w0rd" />
+      </div>
+    </div>
+    {{!-- <input id="password" name="password" type="password"></input> --}}
+    {{!-- <h6>Forgot your password ? Bad luck 😕</h6> --}}
 
-<form action="/users/login" method="post" class="login">
-
-  <div>
-    <label for="mail">Mail:</label>
-    <input type="email" id="mail" name="email" />
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input id="password" name="password" type="password"></input>
-    <h6>Forgot your password ? Bad luck 😕</h6>
-  </div>
-  <div class="button">
+    {{!-- <button class="button"> --}}
     <button>Log In</button>
-  </div>
-</form>
-<p>Not registered yet ? Sign up <a href="/users/signup">here</a></p>
+    {{!-- </button> --}}
+    <p>Not registered yet ? Sign up <a href="/users/signup">here</a></p>
+  </form>
+</div>
