@@ -1,19 +1,95 @@
-html {
-    height: 100%;
+/* html {
+  height: 100%;
 }
 
 body {
-    height: 100%;
-    position: relative;
-    background-color: white;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
-    text-align: center;
-    list-style-type: none;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  text-align: center;
+  list-style-type: none;
+} */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  /* position: relative; */
+  background-color: #729a99;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  /* text-align: center; */
+  list-style-type: none;
 }
 
 nav {
+  background-color: #364858;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: min-content;
+}
+
+@media (min-width: 1000px) {
+  nav {
+    padding: 0 1em;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.logout {
+  margin-top: 4vh;
+  margin-right: 2vh;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.presentation {
+  background-color: white;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.paragraph {
+  text-align: center;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  color: grey;
+}
+
+.table {
+  text-align: center;
+  font-weight: bold;
+}
+
+#footer {
+  background-color: #364858;
+  text-align: center;
+  color: white;
+  padding: 1.5vh;
+}
+/* nav {
     height: 150px;
     width: 100%;
     background-color: white;
@@ -28,167 +104,164 @@ nav ul {
 
 nav li {
     margin-top: 25px;
-}
+} */
 
 header {
-    position: relative;
+  position: relative;
 }
 
-footer {
-    background-color: #F6C9C8;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-top: 0px;
-    height: 20%;
-    margin: 0;
-    padding: 0;
-}
+/* footer {
+  background-color: #f6c9c8;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0px;
+  height: 20%;
+  margin: 0;
+  padding: 0;
+} */
 
-#footer {
-    background-color: #F6C9C8;
-}
+/* #footer {
+  background-color: #f6c9c8;
+} */
 
-#flextitude {
-    display: flex;
-    flex-direction: column;
-    height: 100px;
+/* #flextitude {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
 }
 
 .login_button {
-    box-shadow: none;
-    background: white;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #dcdcdc;
-    display: flex;
-    cursor: hand;
-    color: #F6C9C8;
-    font-family: Arial;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 5px 5px;
-    margin-right: 15px;
-    text-decoration: none;
+  box-shadow: none;
+  background: white;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  cursor: hand;
+  color: #f6c9c8;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 5px;
+  margin-right: 15px;
+  text-decoration: none;
 }
 
 .login_button:hover {
-    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
-    background-color: #e9e9e9;
-}
-
+  background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+  background-color: #e9e9e9;
+} */
 
 /* .login_button:active {
     position: absolute;
     top: 1px;
 } */
 
-#main {
-    position: relative;
-    padding-bottom: 100px;
-    flex: 1;
-    height: 100vh;
+/* #main {
+  position: relative;
+  padding-bottom: 100px;
+  flex: 1;
+  height: 100vh;
 }
 
 #image {
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
 }
 
 #main {
-    max-width: 1280px;
-    min-height: 100%;
-    margin: 0 auto;
-    position: relative;
+  max-width: 1280px;
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
 em {
-    display: block;
-    margin: .5em auto 2em;
-    color: #bbb;
+  display: block;
+  margin: 0.5em auto 2em;
+  color: #bbb;
 }
 
 p,
 p a {
-    color: #aaa;
-    text-decoration: none;
+  color: #aaa;
+  text-decoration: none;
 }
 
 p a:hover,
 p a:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-p+p {
-    color: #bbb;
-    margin-top: 2em;
+p + p {
+  color: #bbb;
+  margin-top: 2em;
 }
 
 .detail {
-    position: absolute;
-    text-align: right;
-    right: 5px;
-    bottom: 5px;
-    width: 50%;
+  position: absolute;
+  text-align: right;
+  right: 5px;
+  bottom: 5px;
+  width: 50%;
 }
 
 a[href*="intent"] {
-    display: inline-block;
-    margin-top: 0.4em;
-}
-
+  display: inline-block;
+  margin-top: 0.4em;
+} */
 
 /*  
 * Rating styles
 */
 
 .rating {
-    width: 226px;
-    margin: 0 auto 1em;
-    font-size: 45px;
-    overflow: hidden;
+  width: 226px;
+  margin: 0 auto 1em;
+  font-size: 45px;
+  overflow: hidden;
 }
 
 .rating a {
-    float: right;
-    color: #aaa;
-    text-decoration: none;
-    -webkit-transition: color .4s;
-    -moz-transition: color .4s;
-    -o-transition: color .4s;
-    transition: color .4s;
+  float: right;
+  color: #aaa;
+  text-decoration: none;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
 }
 
 .rating a:hover,
-.rating a:hover~a,
+.rating a:hover ~ a,
 .rating a:focus,
-.rating a:focus~a {
-    color: orange;
-    cursor: pointer;
+.rating a:focus ~ a {
+  color: orange;
+  cursor: pointer;
 }
 
-.rating2 {
-    direction: rtl;
+/* .rating2 {
+  direction: rtl;
 }
 
 .rating2 a {
-    float: none
-}
-
+  float: none;
+} */
 
 /* Tableau */
 
 table {
-    border-collapse: collapse;
-    color: darkgray;
-    font-weight: lighter;
+  border-collapse: collapse;
+  color: darkgray;
+  font-weight: lighter;
 }
 
 td,
 th {
-    border: 1px solid black;
-    border-color: #f6c9c8;
-    color: #92A8D1;
-    width: 120px;
-    height: 40px;
+  border: 1px solid black;
+  border-color: #f6c9c8;
+  color: #92a8d1;
+  width: 120px;
+  height: 40px;
 }

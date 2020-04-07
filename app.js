@@ -53,6 +53,5 @@ app.locals.title = "Basil";
 
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
-// app.use("/users/profile", require("./routes/users/profile"));
 
 module.exports = app;

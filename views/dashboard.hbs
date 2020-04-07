@@ -1,105 +1,117 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/dashboard.css" />
 
+<nav>
+  <h2 class="title">🌿 Basil</h2>
+  <a href="/users/logout" class="logout">Log out </a>
+</nav>
 
-<header>
+{{!-- <header>
   <ul>
     <a class="login_button" type="button" href="/users/logout">Logout</a>
   </ul>
-</header>
+</header> --}}
 
-<h1> Welcome to your wellness dashboard, {{{ user.firstname }}}🌿 </h1>
+<div class="presentation">
+  <h1 class="title"> Welcome to your wellness dashboard, {{{ user.firstname }}} 👋 </h1>
 
-<div>
-  <img src="/images/undraw_in_progress_ql66.png" class="image" height="50%" width="50%" />
+
+  <img src="/images/undraw_in_progress_ql66.png" class="image" height="35%" width="35%" />
   <h2>How are you doing today ?</h2>
-  <pre>📝This is the place where you can write down how you feel. 
-        How's your mind? How do you feel in your body? How does your soul feel?
+  <h4 class="paragraph">📝This is the place where you can write down how you feel.
+    How's your mind? How do you feel in your body? How does your soul feel?
 
-        You can assess your well-being every time you come, at least once a week. 
-        On Wednesday mornings, for example? 🗓</pre>
+    You can assess your well-being every time you come, at least once a week.
+    On Wednesday mornings, for example? 🗓</h4>
+</div>
+
+{{!-- RATING --}}
+
+<div class="presentation">
   <h2>Mind, Body & Soul rating</h2>
 
-  <p>Mind 🧠</p>
-  <div class="rating rating2">
+  <h3>Mind 🧠</h3>
+  <div class="rating">
     <!--
-          --><a href="#5" title="Give 5 stars">★</a>
+          --><a title="Give 5 stars">★</a>
     <!--
-          --><a href="#4" title="Give 4 stars">★</a>
+          --><a title="Give 4 stars">★</a>
     <!--
-          --><a href="#3" title="Give 3 stars">★</a>
+          --><a title="Give 3 stars">★</a>
     <!--
-          --><a href="#2" title="Give 2 stars">★</a>
+          --><a title="Give 2 stars">★</a>
     <!--
-          --><a href="#1" title="Give 1 star">★</a>
+          --><a title="Give 1 star">★</a>
   </div>
 
-  <p>Body 💪</p>
-  <div class="rating rating2">
+  <h3>Body 💪</h3>
+  <div class="rating">
     <!--
-          --><a href="#5" title="Give 5 stars">★</a>
+          --><a title="Give 5 stars">★</a>
     <!--
-          --><a href="#4" title="Give 4 stars">★</a>
+          --><a title="Give 4 stars">★</a>
     <!--
-          --><a href="#3" title="Give 3 stars">★</a>
+          --><a title="Give 3 stars">★</a>
     <!--
-          --><a href="#2" title="Give 2 stars">★</a>
+          --><a title="Give 2 stars">★</a>
     <!--
-          --><a href="#1" title="Give 1 star">★</a>
+          --><a title="Give 1 star">★</a>
   </div>
 
-  <p>Soul 🙏</p>
-  <div class="rating rating2">
+  <h3>Soul 🙏</h3>
+  <div class="rating">
     <!--
-          --><a href="#5" title="Give 5 stars">★</a>
+          --><a title="Give 5 stars">★</a>
     <!--
-          --><a href="#4" title="Give 4 stars">★</a>
+          --><a title="Give 4 stars">★</a>
     <!--
-          --><a href="#3" title="Give 3 stars">★</a>
+          --><a title="Give 3 stars">★</a>
     <!--
-          --><a href="#2" title="Give 2 stars">★</a>
+          --><a title="Give 2 stars">★</a>
     <!--
-          --><a href="#1" title="Give 1 star">★</a>
+          --><a title="Give 1 star">★</a>
   </div>
 </div>
-<div>
-  <img src="/images/undraw_data_trends_b0wg.png" class="image" height="50%" width="50%" />
+{{!-- </div> --}}
+<div class="presentation">
+  {{!-- <img src="/images/undraw_data_trends_b0wg.png" class="image" height="50%" width="50%" /> --}}
   <h2>Here are your wellness trends</h2>
-  <p>
+  <h4 class="paragraph">
     How did you feel when you started Basil ? How did you feel last week ? Last month ? Last year ? How much money did
     you save ? How happier are you ? Check it here 👇
-  </p>
+  </h4>
+
+
+
+  <!--- Tableau -->
+  <table class="table">
+    <tr>
+      <th></th>
+      <th>DD/MM/YYYY</th>
+      <th>DD/MM/YYYY</th>
+      <th>DD/MM/YYYY</th>
+    </tr>
+    <tr>
+      <td>Mind</td>
+      <td>Rate</td>
+      <td>Rate</td>
+      <td>Rate</td>
+    </tr>
+    <tr>
+      <td>Body</td>
+      <td>Rate</td>
+      <td>Rate</td>
+      <td>Rate</td>
+    </tr>
+    <tr>
+      <td>Soul</td>
+      <td>Rate</td>
+      <td>Rate</td>
+      <td>Rate</td>
+    </tr>
+  </table>
 </div>
 
-
-<!--- Tableau -->
-<table align="center">
-  <tr>
-    <th></th>
-    <th>01/01</th>
-    <th>01/07</th>
-    <th>01/14</th>
-  </tr>
-  <tr>
-    <td>Mind</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <td>Body</td>
-    <td>2</td>
-    <td>3</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>Soul</td>
-    <td>1</td>
-    <td>2</td>
-    <td>5</td>
-  </tr>
-</table>
-
-<h1>{{{Firstname}}}'s wellness program</h1>
+{{!-- <h1>{{{Firstname}}}'s wellness program</h1>
 <pre>Below you will find the teachings that will enable you to find inner balance.
     We show you directly the right video for each theme, depending on the exercices you already have done.</pre>
 
@@ -120,4 +132,4 @@
 
 <div>
   <img src="/images/undraw_healthy_options_sdo3.png" class="image" height="50%" width="50%" />
-</div>
+</div> --}}
