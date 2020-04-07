@@ -4,7 +4,12 @@
 {{!-- <div id="flextitude"> --}}
 <nav>
   {{!-- <ul> --}}
-  <h1 class="title">🌿 Basil</h1>
+  <a href="/" class="title">
+    <h2>🌿 Basil</h2>
+  </a>
+
+  <a href="/users/signup" class="signup">Sign up</a>
+
   {{!-- </ul> --}}
 </nav>
 {{!-- </div> --}}
@@ -20,25 +25,29 @@
   </p>
   <form action="/users/login" method="post" class="form">
 
-    <label for="mail">Email: </label>
+    <label for="mail">
+      <h3>Email:</h3>
+    </label>
     {{!-- <input type="email" id="mail" name="email" /> --}}
     <div className="field">
       <div className="control">
-        <input className="input is-warning" type="text" name="username" placeholder="dalai@lama.org" />
+        <input class="champ" type="text" name="username" placeholder="dalai@lama.org" />
       </div>
     </div>
 
-    <label for="password">Password: </label>
+    <label for="password">
+      <h3>Password:</h3>
+    </label>
     <div className="field">
       <div className="control">
-        <input className="input is-warning" type="text" name="password" placeholder="pa$$w0rd" />
+        <input class="champ" type="text" name="password" placeholder="pa$$w0rd" />
       </div>
     </div>
     {{!-- <input id="password" name="password" type="password"></input> --}}
     {{!-- <h6>Forgot your password ? Bad luck 😕</h6> --}}
 
     {{!-- <button class="button"> --}}
-    <button>Log In</button>
+    <button class="loginbutton">Log In</button>
     {{!-- </button> --}}
     <p>Not registered yet ? Sign up <a href="/users/signup">here</a></p>
   </form>
