@@ -25,13 +25,39 @@
   </p>
   <form action="/users/signup" method="post" class="form">
 
+
+    <label for="firstname">
+      <h3>Firstname:</h3>
+    </label>
+    {{!-- <input type="text" id="firstname" name="firstname" /> --}}
+    <div className="field">
+      <div className="control">
+        <input class="champ" type="text" name="firstname" placeholder="Monica" />
+      </div>
+    </div>
+
+
+    {{!-- <label for="lastname">Lastname:</label>
+    <input type="text" id="lastname" name="lastname" /> --}}
+
+    <label for="lastname">
+      <h3>Lastname:</h3>
+    </label>
+    {{!-- <input type="text" id="firstname" name="firstname" /> --}}
+    <div className="field">
+      <div className="control">
+        <input class="champ" type="text" name="lastname" placeholder="Geller" />
+      </div>
+    </div>
+
+
     <label for="mail">
       <h3>Email:</h3>
     </label>
     {{!-- <input type="email" id="mail" name="email" /> --}}
     <div className="field">
       <div className="control">
-        <input class="champ" type="text" name="username" placeholder="dalai@lama.org" />
+        <input class="champ" type="text" name="email" id="name" placeholder="dalai@lama.org" />
       </div>
     </div>
 
@@ -47,7 +73,11 @@
     {{!-- <h6>Forgot your password ? Bad luck 😕</h6> --}}
 
     {{!-- <button class="button"> --}}
-    <button class="loginbutton">Sign up</button>
+    {{#if error}}
+    <span style="color:red;font-style:italic;text-align:center">{{{ error }}}</span>
+    {{/if}}
+
+    <button class="loginbutton" type="submit">Sign up</button>
     {{!-- </button> --}}
     <p>Already have an account ? Log in <a href="/users/login">here</a></p>
   </form>
