@@ -1,4 +1,104 @@
 html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  /* position: relative; */
+  background-color: #729a99;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  /* text-align: center; */
+  list-style-type: none;
+}
+
+nav {
+  background-color: #364858;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: min-content;
+}
+
+@media (min-width: 1000px) {
+  nav {
+    padding: 0 1em;
+  }
+}
+
+.title {
+  text-align: center;
+  color: white;
+  /* font-size: 40px; */
+  font-size-adjust: initial;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.login {
+  margin-top: 4vh;
+  margin-right: 2vh;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.presentation {
+  background-color: white;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.form {
+  text-align: center;
+}
+
+.champ {
+  border-radius: 3vh;
+  text-align: center;
+  width: 25vh;
+  height: 4vh;
+}
+
+.loginbutton {
+  background-color: #729a99;
+  border-radius: 28px;
+  border: 1px solid #729a99;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin-top: 4vh;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+.loginbutton:hover {
+  background-color: #729a99;
+}
+.loginbutton:active {
+  position: relative;
+  top: 1px;
+}
+
+#footer {
+  background-color: #364858;
+  text-align: center;
+  color: white;
+  padding: 1.5vh;
+}
+
+/* html {
     height: 100%;
 }
 
@@ -67,4 +167,4 @@ footer {
 
 #footer {
     background-color: #F6C9C8;
-}
+} */

@@ -1,5 +1,60 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/signup.css" />
 
+{{!-- <header> --}}
+{{!-- <div id="flextitude"> --}}
+<nav>
+  {{!-- <ul> --}}
+  <a href="/" class="title">
+    <h2>🌿 Basil</h2>
+  </a>
+
+  <a href="/users/login" class="login">Log in</a>
+
+  {{!-- </ul> --}}
+</nav>
+{{!-- </div> --}}
+{{!-- </header> --}}
+
+<div class="presentation">
+  {{!-- <h3>***</h3> --}}
+  <h2>Sign up 🦥</h2>
+  <h3>to create an account and wellness dashboard</h3>
+  <img src="/images/undraw_sign_in_e6hj.png" class="image" height="25%" width="25%" />
+  <p>
+    Enjoy your personal programm, see your progress and take advantages from your healthier lifestyle
+  </p>
+  <form action="/users/signup" method="post" class="form">
+
+    <label for="mail">
+      <h3>Email:</h3>
+    </label>
+    {{!-- <input type="email" id="mail" name="email" /> --}}
+    <div className="field">
+      <div className="control">
+        <input class="champ" type="text" name="username" placeholder="dalai@lama.org" />
+      </div>
+    </div>
+
+    <label for="password">
+      <h3>Password:</h3>
+    </label>
+    <div className="field">
+      <div className="control">
+        <input class="champ" type="text" name="password" placeholder="pa$$w0rd" />
+      </div>
+    </div>
+    {{!-- <input id="password" name="password" type="password"></input> --}}
+    {{!-- <h6>Forgot your password ? Bad luck 😕</h6> --}}
+
+    {{!-- <button class="button"> --}}
+    <button class="loginbutton">Sign up</button>
+    {{!-- </button> --}}
+    <p>Already have an account ? Log in <a href="/users/login">here</a></p>
+  </form>
+</div>
+
+{{!-- <link rel="stylesheet" type="text/css" href="/stylesheets/signup.css" />
+
 <header>
   <div id="flextitude">
     <nav>
@@ -94,4 +149,4 @@
     <button type="submit">Sign up</button>
   </div>
 </form>
-<p>Already have an account ? Log in <a href="/login">here</a></p>
+<p>Already have an account ? Log in <a href="/login">here</a></p> --}}
