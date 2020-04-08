@@ -30,40 +30,40 @@
   <h2>Mind, Body & Soul rating</h2>
 
   <form action="/rates" method="POST" class="form">
-  <h3>Mind 🧠</h3>
-  <select name="mind">
-    {{#each rateOptions}}
+    <h3>Mind 🧠</h3>
+    <select name="mind">
+      {{#each rateOptions}}
       {{#if (equalRate this ../mindRate) }}
-        <option selected="selected" value="{{this}}">{{this}}</option>
+      <option selected="selected" value="{{this}}">{{this}}</option>
       {{else}}
-        <option value="{{this}}">{{this}}</option>
+      <option value="{{this}}">{{this}}</option>
       {{/if}}
-    {{/each}}
-  </select>
+      {{/each}}
+    </select>
 
-  <h3>Body 💪</h3>
-  <select name="body">
-    {{#each rateOptions}}
+    <h3>Body 💪</h3>
+    <select name="body">
+      {{#each rateOptions}}
       {{#if (equalRate this ../bodyRate) }}
-        <option selected="selected" value="{{this}}">{{this}}</option>
+      <option selected="selected" value="{{this}}">{{this}}</option>
       {{else}}
-        <option value="{{this}}">{{this}}</option>
+      <option value="{{this}}">{{this}}</option>
       {{/if}}
-    {{/each}}
-  </select>
+      {{/each}}
+    </select>
 
-  <h3>Soul 🙏</h3>
-  <select name="soul">
-    {{#each rateOptions}}
+    <h3>Soul 🙏</h3>
+    <select name="soul">
+      {{#each rateOptions}}
       {{#if (equalRate this ../soulRate) }}
-        <option selected="selected" value="{{this}}">{{this}}</option>
+      <option selected="selected" value="{{this}}">{{this}}</option>
       {{else}}
-        <option value="{{this}}">{{this}}</option>
+      <option value="{{this}}">{{this}}</option>
       {{/if}}
-    {{/each}}
-  </select><br />
+      {{/each}}
+    </select><br />
 
-  <button class="loginbutton" type="submit">Sauvegarder</button>
+    <button class="loginbutton" type="submit">Sauvegarder</button>
 
   </form>
 
