@@ -63,7 +63,7 @@
       {{/each}}
     </select><br />
 
-    <button class="loginbutton" type="submit">Sauvegarder</button>
+    <button class="loginbutton" type="submit">Save</button>
 
   </form>
 
@@ -81,33 +81,24 @@
 
 
 <!--- Tableau -->
-{{!-- <table class="table">
+<div class="presentation">
+<table class="table">
     <tr>
       <th></th>
-      <th>DD/MM/YYYY</th>
-      <th>DD/MM/YYYY</th>
-      <th>DD/MM/YYYY</th>
+      <th>MIND</th>
+      <th>BODY</th>
+      <th>SOUL</th>
     </tr>
-    <tr>
-      <td>Mind</td>
-      <td>Rate</td>
-      <td>Rate</td>
-      <td>Rate</td>
-    </tr>
-    <tr>
-      <td>Body</td>
-      <td>Rate</td>
-      <td>Rate</td>
-      <td>Rate</td>
-    </tr>
-    <tr>
-      <td>Soul</td>
-      <td>Rate</td>
-      <td>Rate</td>
-      <td>Rate</td>
-    </tr>
+    {{#each userHistory}}
+      <tr>
+        <td>{{formatRelative this.created_at}}</td>
+        <td>{{this.mindHistory}}</td>
+        <td>{{this.bodyHistory}}</td>
+        <td>{{this.soulHistory}}</td>
+      </tr>
+    {{/each}}
   </table>
-</div> --}}
+  </div>
 
 {{!-- 
 <pre>Below you will find the teachings that will enable you to find inner balance.

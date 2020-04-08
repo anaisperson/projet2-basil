@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Rate = require('../models/Rate');
+const RateHistory = require('../models/RateHistory');
 const mongoose = require('mongoose');
 
 router.post('/', async function(req, res, next) {
@@ -14,12 +15,25 @@ router.post('/', async function(req, res, next) {
 
     for (let [name, value] of Object.entries(data)) {
         let toUpdateOrCreate = { title: name, rate: value, user: user };
-        await Rate.findOneAndUpdate({ user: user, title: name }, toUpdateOrCreate, options)
+        Rate.findOneAndUpdate({ user: user, title: name }, toUpdateOrCreate, options)
             .then()
             .catch(err => {
                 return res.status(500).send({ message: err });
             });
     };
+
+    // Rate History
+    const history = RateHistory({
+        mindHistory: data.mind,
+        bodyHistory: data.body,
+        soulHistory: data.soul,
+        user: user,
+    });
+    history.save()
+        .then()
+        .catch(err => {
+            return res.status(500).send({ message: `On history : ${err}` });
+        });
 
     res.redirect('/users/profile');
 });

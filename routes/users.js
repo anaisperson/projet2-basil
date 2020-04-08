@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const User = require("../models/User");
 const Rate = require("../models/Rate");
+const RateHistory = require("../models/RateHistory");
 
 router.get("/signup", function(req, res, next) {
     res.render('signup', { error: req.query.error });
@@ -80,13 +81,16 @@ router.get("/profile", async function(req, res, next) {
         }
     });
 
+    const userHistory = await RateHistory.find({ user: req.session.user });
     const dataToRender = {
         user: req.session.user,
         mindRate: mind,
         bodyRate: body,
         soulRate: soul,
         rateOptions: [1, 2, 3, 4, 5],
+        userHistory: userHistory,
     };
+
     res.render('dashboard', dataToRender);
 });
 

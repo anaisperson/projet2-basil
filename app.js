@@ -10,7 +10,9 @@ const logger = require("morgan");
 const path = require("path");
 const session = require("express-session");
 const hbs = require('hbs');
+const HandlebarsIntl = require('handlebars-intl');
 hbs.handlebars = require('handlebars');
+HandlebarsIntl.registerWith(hbs);
 
 mongoose
     .connect(process.env.MONGODB_URI || 'mongodb://localhost/basil-v2', {
