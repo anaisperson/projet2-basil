@@ -83,6 +83,10 @@ nav {
   font-weight: bold;
 }
 
+.form {
+  text-align: center;
+}
+
 .loginbutton {
   background-color: #729a99;
   border-radius: 28px;
