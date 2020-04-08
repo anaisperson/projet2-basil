@@ -1,22 +1,13 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/signup.css" />
 
-{{!-- <header> --}}
-{{!-- <div id="flextitude"> --}}
 <nav>
-  {{!-- <ul> --}}
   <a href="/" class="title">
     <h2>🌿 Basil</h2>
   </a>
-
   <a href="/users/login" class="login">Log in</a>
-
-  {{!-- </ul> --}}
 </nav>
-{{!-- </div> --}}
-{{!-- </header> --}}
 
 <div class="presentation">
-  {{!-- <h3>***</h3> --}}
   <h2>Sign up 🦥</h2>
   <h3>to create an account and wellness dashboard</h3>
   <img src="/images/undraw_sign_in_e6hj.png" class="image" height="25%" width="25%" />
@@ -29,32 +20,24 @@
     <label for="firstname">
       <h3>Firstname:</h3>
     </label>
-    {{!-- <input type="text" id="firstname" name="firstname" /> --}}
     <div className="field">
       <div className="control">
         <input class="champ" type="text" name="firstname" placeholder="Monica" />
       </div>
     </div>
 
-
-    {{!-- <label for="lastname">Lastname:</label>
-    <input type="text" id="lastname" name="lastname" /> --}}
-
     <label for="lastname">
       <h3>Lastname:</h3>
     </label>
-    {{!-- <input type="text" id="firstname" name="firstname" /> --}}
     <div className="field">
       <div className="control">
         <input class="champ" type="text" name="lastname" placeholder="Geller" />
       </div>
     </div>
 
-
     <label for="mail">
       <h3>Email:</h3>
     </label>
-    {{!-- <input type="email" id="mail" name="email" /> --}}
     <div className="field">
       <div className="control">
         <input class="champ" type="text" name="email" id="name" placeholder="dalai@lama.org" />
@@ -69,114 +52,13 @@
         <input class="champ" type="password" name="password" placeholder="pa$$w0rd" />
       </div>
     </div>
-    {{!-- <input id="password" name="password" type="password"></input> --}}
-    {{!-- <h6>Forgot your password ? Bad luck 😕</h6> --}}
 
-    {{!-- <button class="button"> --}}
     {{#if error}}
     <span style="color:red;font-style:italic;text-align:center">{{{ error }}}</span>
     {{/if}}
 
     <button class="loginbutton" type="submit">Sign up</button>
-    {{!-- </button> --}}
+
     <p>Already have an account ? Log in <a href="/users/login">here</a></p>
   </form>
 </div>
-
-{{!-- <link rel="stylesheet" type="text/css" href="/stylesheets/signup.css" />
-
-<header>
-  <div id="flextitude">
-    <nav>
-      <ul>
-        <h1>Basil 🌿</h1>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<div>
-  <h3>***</h3>
-  <h1>Sign up ✍️</h1>
-  <img src="/images/undraw_sign_in_e6hj.png" class="image" height="80%" width="80%" />
-  <h2>Log in to check your wellness dashboard</h2>
-  <p>
-    Enjoy your personal programm, see your progress and take advantages from your healthier lifestyle
-  </p>
-</div>
-
-<!--- Formulaire -->
-<style>
-  form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
-    border-color: #F6C9C8;
-    color: darkgray;
-    font-size: medium;
-    font-weight: bold;
-  }
-
-  form div+div {
-    margin-top: 1em;
-  }
-
-  label {
-    display: inline-block;
-    width: 90px;
-    text-align: right;
-  }
-
-  input,
-  textarea {
-    font: 1em sans-serif;
-    width: 200px;
-    box-sizing: border-box;
-    border: 1px solid #999;
-    border-radius: 5px;
-  }
-
-  input:focus,
-  textarea:focus {
-    border-color: darkgray;
-  }
-
-  .button {
-    padding-left: 90px;
-  }
-
-  button {
-    margin-left: 0.5em;
-  }
-</style>
-
-{{#if error}}
-<span style="color:red;font-style:italic;text-align:center">{{{ error }}}</span>
-{{/if}}
-
-<form action="/users/signup" method="POST" class="new">
-  <div>
-    <label for="firstname">Firstname:</label>
-    <input type="text" id="firstname" name="firstname" />
-  </div>
-  <div>
-    <label for="lastname">Lastname:</label>
-    <input type="text" id="lastname" name="lastname" />
-  </div>
-  <div>
-    <label for="email">Mail:</label>
-    <input type="email" id="email" name="email" />
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input id="password" name="password" type="password"></input>
-    <h6>To preserve your privacy and keep hackers away: eat a bit of garlic every day 🧄✚ your password must be at least
-      12 characters long, upper and lower case, and at least one number. </h6>
-  </div>
-  <div class="button">
-    <button type="submit">Sign up</button>
-  </div>
-</form>
-<p>Already have an account ? Log in <a href="/login">here</a></p> --}}
