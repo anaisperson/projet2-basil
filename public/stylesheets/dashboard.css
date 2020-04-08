@@ -70,6 +70,10 @@ nav {
   text-align: center;
 }
 
+.rate {
+  color: red;
+}
+
 .loginbutton {
   background-color: #729a99;
   border-radius: 28px;
