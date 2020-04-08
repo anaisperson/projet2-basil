@@ -1,4 +1,6 @@
-// require("dotenv").config();
+require("dotenv").config();
+
+const PORT = process.env.PORT || 3000;
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -63,5 +65,7 @@ app.locals.title = "Basil";
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
 app.use("/rates", require("./routes/rates"));
+
+app.listen(PORT);
 
 module.exports = app;
