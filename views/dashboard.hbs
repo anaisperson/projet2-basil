@@ -29,48 +29,46 @@
 <div class="presentation">
   <h2>Mind, Body & Soul rating</h2>
 
+  <form action="/rates" method="POST" class="form">
   <h3>Mind 🧠</h3>
-  <div class="rating">
-    <!--
-          --><a title="Give 5 stars">★</a>
-    <!--
-          --><a title="Give 4 stars">★</a>
-    <!--
-          --><a title="Give 3 stars">★</a>
-    <!--
-          --><a title="Give 2 stars">★</a>
-    <!--
-          --><a title="Give 1 star">★</a>
-  </div>
+  <select name="mind">
+    {{#each rateOptions}}
+      {{#if (equalRate this ../mindRate) }}
+        <option selected="selected" value="{{this}}">{{this}}</option>
+      {{else}}
+        <option value="{{this}}">{{this}}</option>
+      {{/if}}
+    {{/each}}
+  </select>
 
   <h3>Body 💪</h3>
-  <div class="rating">
-    <!--
-          --><a title="Give 5 stars">★</a>
-    <!--
-          --><a title="Give 4 stars">★</a>
-    <!--
-          --><a title="Give 3 stars">★</a>
-    <!--
-          --><a title="Give 2 stars">★</a>
-    <!--
-          --><a title="Give 1 star">★</a>
-  </div>
+  <select name="body">
+    {{#each rateOptions}}
+      {{#if (equalRate this ../bodyRate) }}
+        <option selected="selected" value="{{this}}">{{this}}</option>
+      {{else}}
+        <option value="{{this}}">{{this}}</option>
+      {{/if}}
+    {{/each}}
+  </select>
 
   <h3>Soul 🙏</h3>
-  <div class="rating">
-    <!--
-          --><a title="Give 5 stars">★</a>
-    <!--
-          --><a title="Give 4 stars">★</a>
-    <!--
-          --><a title="Give 3 stars">★</a>
-    <!--
-          --><a title="Give 2 stars">★</a>
-    <!--
-          --><a title="Give 1 star">★</a>
-  </div>
+  <select name="soul">
+    {{#each rateOptions}}
+      {{#if (equalRate this ../soulRate) }}
+        <option selected="selected" value="{{this}}">{{this}}</option>
+      {{else}}
+        <option value="{{this}}">{{this}}</option>
+      {{/if}}
+    {{/each}}
+  </select><br />
+
+  <button class="loginbutton" type="submit">Sauvegarder</button>
+
+  </form>
+
 </div>
+
 {{!-- </div> --}}
 <div class="presentation">
   {{!-- <img src="/images/undraw_data_trends_b0wg.png" class="image" height="50%" width="50%" /> --}}

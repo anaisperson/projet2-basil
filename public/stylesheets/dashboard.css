@@ -14,81 +14,83 @@ body {
 } */
 
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  height: 100%;
-  /* position: relative; */
-  background-color: #729a99;
-  margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: small;
-  /* text-align: center; */
-  list-style-type: none;
+    height: 100%;
+    /* position: relative; */
+    background-color: #729a99;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    /* text-align: center; */
+    list-style-type: none;
 }
 
 nav {
-  background-color: #364858;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  height: min-content;
+    background-color: #364858;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: min-content;
 }
 
 @media (min-width: 1000px) {
-  nav {
-    padding: 0 1em;
-  }
+    nav {
+        padding: 0 1em;
+    }
 }
 
 .title {
-  text-align: center;
+    text-align: center;
 }
 
 .logout {
-  margin-top: 4vh;
-  margin-right: 2vh;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
+    margin-top: 4vh;
+    margin-right: 2vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 .presentation {
-  background-color: white;
-  border-radius: 1em;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  margin-left: 25%;
-  margin-right: 25%;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
+    background-color: white;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .paragraph {
-  text-align: center;
-  padding-left: 5vh;
-  padding-right: 5vh;
-  color: grey;
+    text-align: center;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    color: grey;
 }
 
 .table {
-  text-align: center;
-  font-weight: bold;
+    text-align: center;
+    font-weight: bold;
 }
 
 #footer {
-  background-color: #364858;
-  text-align: center;
-  color: white;
-  padding: 1.5vh;
+    background-color: #364858;
+    text-align: center;
+    color: white;
+    padding: 1.5vh;
 }
+
+
 /* nav {
     height: 150px;
     width: 100%;
@@ -107,8 +109,9 @@ nav li {
 } */
 
 header {
-  position: relative;
+    position: relative;
 }
+
 
 /* footer {
   background-color: #f6c9c8;
@@ -121,9 +124,11 @@ header {
   padding: 0;
 } */
 
+
 /* #footer {
   background-color: #f6c9c8;
 } */
+
 
 /* #flextitude {
   display: flex;
@@ -153,10 +158,12 @@ header {
   background-color: #e9e9e9;
 } */
 
+
 /* .login_button:active {
     position: absolute;
     top: 1px;
 } */
+
 
 /* #main {
   position: relative;
@@ -212,11 +219,13 @@ a[href*="intent"] {
   margin-top: 0.4em;
 } */
 
+
 /*  
 * Rating styles
 */
 
-.rating {
+
+/* .rating {
   width: 226px;
   margin: 0 auto 1em;
   font-size: 45px;
@@ -239,7 +248,8 @@ a[href*="intent"] {
 .rating a:focus ~ a {
   color: orange;
   cursor: pointer;
-}
+} */
+
 
 /* .rating2 {
   direction: rtl;
@@ -249,19 +259,20 @@ a[href*="intent"] {
   float: none;
 } */
 
+
 /* Tableau */
 
 table {
-  border-collapse: collapse;
-  color: darkgray;
-  font-weight: lighter;
+    border-collapse: collapse;
+    color: darkgray;
+    font-weight: lighter;
 }
 
 td,
 th {
-  border: 1px solid black;
-  border-color: #f6c9c8;
-  color: #92a8d1;
-  width: 120px;
-  height: 40px;
+    border: 1px solid black;
+    border-color: #f6c9c8;
+    color: #92a8d1;
+    width: 120px;
+    height: 40px;
 }
