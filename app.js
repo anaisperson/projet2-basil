@@ -13,7 +13,7 @@ const hbs = require('hbs');
 hbs.handlebars = require('handlebars');
 
 mongoose
-    .connect("mongodb://localhost/basil-v2", {
+    .connect(process.env.MONGODB_URI || 'mongodb://localhost/basil-v2', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
